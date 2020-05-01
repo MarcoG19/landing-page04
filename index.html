@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joker | Landing Page UI Design</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"><img src="img/logo.png" alt="Joker"></a>
+    <div class="toggle"><img src="img/toggle.png" alt="toggle"></div>
+  </header>
+  <div class="banner">
+    <div class="content">
+      <h2>Put on a <span>Happy</span> face</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur! Eos optio consequuntur sapiente! Inventore laboriosam ducimus optio consequuntur, vero pariatur, placeat repellendus reprehenderit iusto nobis cupiditate cumque, eos quae.</p>
+      <a href="#" class="play" onclick="toggle();"><img src="img/play.png" alt="play">Watch Trailer</a>
+      <div class="slide"></div>
+      <ul class="sci">
+        <li><a href="#"><img src="img/facebook2.png" alt="facebook"></a></li>
+        <li><a href="#"><img src="img/twitter2.png" alt="twitter"></a></li>
+        <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+      </ul>
+    </div>
+  </div> 
+  <div class="trailer">
+    <video src="video/Joker_Trailer.mp4" controls="true"></video>
+    <img src="img/close.png" alt="" class="close" onclick="toggle();">
+  </div>
+
+  <!-- Logica Programación con JavaScript -->
+  <script type="text/javascript">
+    function toggle(){
+      var trailer = document.querySelector('.trailer');
+      var video = document.querySelector('video');
+      trailer.classList.toggle('active');
+      video.currentTime = 0;
+      video.pause();
+    }
+  </script>
+</body>
+</html>
